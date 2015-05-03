@@ -8,7 +8,7 @@ To test the example application run the following commands.
 
 * To package the example run.
 
-        mvn package
+        mvn package -DskipTests
 
 * To run the server run.
 
