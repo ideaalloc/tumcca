@@ -24,13 +24,13 @@ To test the example application run the following commands.
 ```
     POST    /api/sign-in
             Content-Type: application/json
-            REQUEST: {"username": "wuwenchuan", "password": "888888"}
+            REQUEST: {"username": "lvchao", "password": "888888"}
             RESPONSE:
             {
               "credit" : 100,
               "shopId" : 1,
               "credentials" : "6ac647dd-93f0-4fea-9b79-73e3dde6d180",
-              "shopName" : "七彩马科技"
+              "shopName" : "whrockers club"
             }
             ERROR:
             403
@@ -50,7 +50,7 @@ To test the example application run the following commands.
             REQUEST:
             {
               "shopId": 1,
-              "username": "wuwenchuan",
+              "username": "lvchao",
               "password": "888888",
               "credit": 100
             }
