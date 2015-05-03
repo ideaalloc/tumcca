@@ -1,0 +1,24 @@
+﻿<br />
+Select a product category: 
+    <wj-combo-box
+        items-source="cvCat"
+        display-member-path="Category_Name">
+    </wj-combo-box>
+<!-- sort on server -->
+    <wj-menu value="cvPrd.sortOnServer" header="Sort on Server">
+        <wj-menu-item value="true">True</wj-menu-item>
+        <wj-menu-item value="false">False</wj-menu-item>
+    </wj-menu>
+<br />
+<br />
+<p>
+    View/Edit products in category <b>{{cvCat.currentItem.Category_Name}}:</b></p>
+<wj-flex-grid class="grid" selection-mode="RowRange" allow-add-new="true" allow-delete="true" items-source="cvPrd">
+    <wj-flex-grid-column binding="Product_ID" header="ID" width="50" is-read-only="true"></wj-flex-grid-column>
+    <wj-flex-grid-column binding="Product_Name" header="Name" width="*"></wj-flex-grid-column>
+    <wj-flex-grid-column binding="Quantity_Per_Unit" header="Qty/Unit" width="*"></wj-flex-grid-column>
+    <wj-flex-grid-column binding="Supplier_ID" header="Supplier" data-map="mapSup"></wj-flex-grid-column>
+    <wj-flex-grid-column binding="Unit_Price" header="Unit Price" format="n2"></wj-flex-grid-column>
+    <wj-flex-grid-column binding="Units_In_Stock" header="In Stock"></wj-flex-grid-column>
+    <wj-flex-grid-column binding="Discontinued" header="Discontinued"></wj-flex-grid-column>
+</wj-flex-grid>
